@@ -9,7 +9,7 @@ def find_gatt_uuid(gatt, description):
     for primary in gatt:
         if primary['description'] == description:
             return primary['uuid']
-        for characteristic in primary['charactistics']:
+        for characteristic in primary['characteristics']:
             if characteristic['description'] == description:
                 return characteristic['uuid']
     return ""
