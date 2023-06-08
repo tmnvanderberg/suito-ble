@@ -1,0 +1,310 @@
+[
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000a",
+        "uuid": "00001801-0000-1000-8000-00805f9b34fb",
+        "description": "generic attribute profile",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000a/char000b",
+                "uuid": "00002a05-0000-1000-8000-00805f9b34fb",
+                "description": "service changed",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000a/char000b/desc000d",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "client characteristic configuration"
+                }
+            }
+        ]
+    },
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e",
+        "uuid": "00001816-0000-1000-8000-00805f9b34fb",
+        "description": "cycling speed and cadence",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char000f",
+                "uuid": "00002a5b-0000-1000-8000-00805f9b34fb",
+                "description": "csc measurement",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char000f/desc0011",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "client characteristic configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char0012",
+                "uuid": "00002a5c-0000-1000-8000-00805f9b34fb",
+                "description": "csc feature"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char0014",
+                "uuid": "00002a5d-0000-1000-8000-00805f9b34fb",
+                "description": "sensor location"
+            }
+        ]
+    },
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016",
+        "uuid": "00001818-0000-1000-8000-00805f9b34fb",
+        "description": "Cycling Power",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char0017",
+                "uuid": "00002a63-0000-1000-8000-00805f9b34fb",
+                "description": "Cycling Power Measurement",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char0017/desc0019",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001a",
+                "uuid": "00002a65-0000-1000-8000-00805f9b34fb",
+                "description": "Cycling Power Feature"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001c",
+                "uuid": "00002a5d-0000-1000-8000-00805f9b34fb",
+                "description": "Sensor Location"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001e",
+                "uuid": "00002a66-0000-1000-8000-00805f9b34fb",
+                "description": "Cycling Power Control Point",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001e/desc0020",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            }
+        ]
+    },
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021",
+        "uuid": "00001826-0000-1000-8000-00805f9b34fb",
+        "description": "Fitness Machine",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0022",
+                "uuid": "00002acc-0000-1000-8000-00805f9b34fb",
+                "description": "Fitness Machine Feature"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0024",
+                "uuid": "00002ad2-0000-1000-8000-00805f9b34fb",
+                "description": "Indoor Bike Data",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0024/desc0026",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0027",
+                "uuid": "00002ad3-0000-1000-8000-00805f9b34fb",
+                "description": "Training Status",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0027/desc0029",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002a",
+                "uuid": "00002ad6-0000-1000-8000-00805f9b34fb",
+                "description": "Supported Resistance Level Range"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002c",
+                "uuid": "00002ad8-0000-1000-8000-00805f9b34fb",
+                "description": "Supported Power Range"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002e",
+                "uuid": "00002ada-0000-1000-8000-00805f9b34fb",
+                "description": "Fitness Machine Status",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002e/desc0030",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0031",
+                "uuid": "00002ad9-0000-1000-8000-00805f9b34fb",
+                "description": "Fitness Machine Control Point",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0031/desc0033",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            }
+        ]
+    },
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034",
+        "uuid": "347b0001-7635-408b-8918-8ff3949ce592",
+        "description": "Vendor specific",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0035",
+                "uuid": "347b0010-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0037",
+                "uuid": "347b0011-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0037/desc0039",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char003a",
+                "uuid": "347b0018-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char003c",
+                "uuid": "347b0012-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char003e",
+                "uuid": "347b0013-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0040",
+                "uuid": "347b0014-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0040/desc0042",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0043",
+                "uuid": "347b0016-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0045",
+                "uuid": "347b0017-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0045/desc0047",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0048",
+                "uuid": "347b0019-7635-408b-8918-8ff3949ce592",
+                "description": "Vendor specific"
+            }
+        ]
+    },
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a",
+        "uuid": "0000180a-0000-1000-8000-00805f9b34fb",
+        "description": "Device Information",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char004b",
+                "uuid": "00002a29-0000-1000-8000-00805f9b34fb",
+                "description": "Manufacturer Name String"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char004d",
+                "uuid": "00002a25-0000-1000-8000-00805f9b34fb",
+                "description": "Serial Number String"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char004f",
+                "uuid": "00002a27-0000-1000-8000-00805f9b34fb",
+                "description": "Hardware Revision String"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char0051",
+                "uuid": "00002a26-0000-1000-8000-00805f9b34fb",
+                "description": "Firmware Revision String"
+            },
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char0053",
+                "uuid": "00002a28-0000-1000-8000-00805f9b34fb",
+                "description": "Software Revision String"
+            }
+        ]
+    },
+    {
+        "type": "primary service",
+        "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0055",
+        "uuid": "8e400001-f315-4f60-9fb8-838830daea50",
+        "description": "Vendor specific",
+        "characteristics": [
+            {
+                "type": "characteristic",
+                "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0055/char0056",
+                "uuid": "8e400001-f315-4f60-9fb8-838830daea50",
+                "description": "Vendor specific",
+                "descriptor": {
+                    "type": "descriptor",
+                    "path": "/org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0055/char0056/desc0058",
+                    "uuid": "00002902-0000-1000-8000-00805f9b34fb",
+                    "description": "Client Characteristic Configuration"
+                }
+            }
+        ]
+    }
+]

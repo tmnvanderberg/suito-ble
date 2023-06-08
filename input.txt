@@ -1,0 +1,196 @@
+primary service (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000a
+        00001801-0000-1000-8000-00805f9b34fb
+        generic attribute profile
+characteristic (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000a/char000b
+        00002a05-0000-1000-8000-00805f9b34fb
+        service changed
+descriptor (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000a/char000b/desc000d
+        00002902-0000-1000-8000-00805f9b34fb
+        client characteristic configuration
+primary service (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e
+        00001816-0000-1000-8000-00805f9b34fb
+        cycling speed and cadence
+characteristic (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char000f
+        00002a5b-0000-1000-8000-00805f9b34fb
+        csc measurement
+descriptor (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char000f/desc0011
+        00002902-0000-1000-8000-00805f9b34fb
+        client characteristic configuration
+characteristic (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char0012
+        00002a5c-0000-1000-8000-00805f9b34fb
+        csc feature
+characteristic (handle 0x0000)
+        /org/bluez/hci0/dev_fd_99_e8_d9_5a_c2/service000e/char0014
+        00002a5d-0000-1000-8000-00805f9b34fb
+        sensor location
+Primary Service (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016
+        00001818-0000-1000-8000-00805f9b34fb
+        Cycling Power
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char0017
+        00002a63-0000-1000-8000-00805f9b34fb
+        Cycling Power Measurement
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char0017/desc0019
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001a
+        00002a65-0000-1000-8000-00805f9b34fb
+        Cycling Power Feature
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001c
+        00002a5d-0000-1000-8000-00805f9b34fb
+        Sensor Location
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001e
+        00002a66-0000-1000-8000-00805f9b34fb
+        Cycling Power Control Point
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0016/char001e/desc0020
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Primary Service (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021
+        00001826-0000-1000-8000-00805f9b34fb
+        Fitness Machine
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0022
+        00002acc-0000-1000-8000-00805f9b34fb
+        Fitness Machine Feature
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0024
+        00002ad2-0000-1000-8000-00805f9b34fb
+        Indoor Bike Data
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0024/desc0026
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0027
+        00002ad3-0000-1000-8000-00805f9b34fb
+        Training Status
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0027/desc0029
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002a
+        00002ad6-0000-1000-8000-00805f9b34fb
+        Supported Resistance Level Range
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002c
+        00002ad8-0000-1000-8000-00805f9b34fb
+        Supported Power Range
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002e
+        00002ada-0000-1000-8000-00805f9b34fb
+        Fitness Machine Status
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char002e/desc0030
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0031
+        00002ad9-0000-1000-8000-00805f9b34fb
+        Fitness Machine Control Point
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0021/char0031/desc0033
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Primary Service (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034
+        347b0001-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0035
+        347b0010-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0037
+        347b0011-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0037/desc0039
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char003a
+        347b0018-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char003c
+        347b0012-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char003e
+        347b0013-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0040
+        347b0014-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0040/desc0042
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0043
+        347b0016-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0045
+        347b0017-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0045/desc0047
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0034/char0048
+        347b0019-7635-408b-8918-8ff3949ce592
+        Vendor specific
+Primary Service (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a
+        0000180a-0000-1000-8000-00805f9b34fb
+        Device Information
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char004b
+        00002a29-0000-1000-8000-00805f9b34fb
+        Manufacturer Name String
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char004d
+        00002a25-0000-1000-8000-00805f9b34fb
+        Serial Number String
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char004f
+        00002a27-0000-1000-8000-00805f9b34fb
+        Hardware Revision String
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char0051
+        00002a26-0000-1000-8000-00805f9b34fb
+        Firmware Revision String
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service004a/char0053
+        00002a28-0000-1000-8000-00805f9b34fb
+        Software Revision String
+Primary Service (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0055
+        8e400001-f315-4f60-9fb8-838830daea50
+        Vendor specific
+Characteristic (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0055/char0056
+        8e400001-f315-4f60-9fb8-838830daea50
+        Vendor specific
+Descriptor (Handle 0x0000)
+        /org/bluez/hci0/dev_FD_99_E8_D9_5A_C2/service0055/char0056/desc0058
+        00002902-0000-1000-8000-00805f9b34fb
+        Client Characteristic Configuration

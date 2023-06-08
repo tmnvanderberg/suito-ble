@@ -1,0 +1,47 @@
+[?1049h[22;0;0t[22;0t[?1h=[H[2J]11;?[?2004h[?u[c[?25h[?25l(B[m[H[2J[23B[J[mason-lspconfig.nvim] installing ocamllsp[?1004h[?25h[?25l[H[38;2;70;67;64m[48;2;248;242;229m[23M
+(B[m[38;2;255;255;255m[48;2;255;0;0mE325: ATTENTION(B[m[38;2;70;67;64m[48;2;248;242;229m[K
+Found a swap file by the name "~/.local/state/nvim/swap//%home%tmn%src%bleak%ble
+ak%examples%discover.py.swp"[K
+          owned by: tmn   dated: Thu Jun 08 15:06:01 2023[K
+         file name: ~tmn/src/bleak/bleak/examples/discover.py[K
+          modified: no[K
+         user name: tmn   host name: nixrp200[K
+        process ID: 7142 (STILL RUNNING)[K
+While opening file "discover.py"[K
+             dated: Thu Jun 08 15:05:31 2023[K
+[K
+(1) Another program may be editing the same file.  If this is the case,[K
+    be careful not to end up with two different instances of the same[K
+    file when making changes.  Quit, or continue with caution.[K
+(2) An edit session for this file crashed.[K
+    If this is the case, use ":recover" or "vim -r discover.py"[K
+    to recover the changes (see ":help recovery").[K
+    If you did this already, delete the swap file "/home/tmn/.local/state/nvim/s
+wap//%home%tmn%src%bleak%bleak%examples%discover.py.swp"[K
+    to avoid this message.[K
+[K
+(B[0;1m[38;2;46;139;87m[48;2;248;242;229mSwap file "~/.local/state/nvim/swap//%home%tmn%src%bleak%bleak%examples%discover
+-- More --(B[m[38;2;70;67;64m[48;2;248;242;229m[K]112[2 q[H[mason-lspconfig.nvim] installing ocamllsp[K
+(B[m[38;2;255;255;255m[48;2;255;0;0mE325: ATTENTION(B[m[38;2;70;67;64m[48;2;248;242;229m[K
+Found a swap file by the name "~/.local/state/nvim/swap//%home%tmn%src%bleak%ble
+ak%examples%discover.py.swp"[K
+          owned by: tmn   dated: Thu Jun 08 15:06:01 2023[K
+         file name: ~tmn/src/bleak/bleak/examples/discover.py[K
+          modified: no[K
+         user name: tmn   host name: nixrp200[K
+        process ID: 7142 (STILL RUNNING)[K
+While opening file "discover.py"[K
+             dated: Thu Jun 08 15:05:31 2023[K
+[K
+(1) Another program may be editing the same file.  If this is the case,[K
+    be careful not to end up with two different instances of the same[K
+    file when making changes.  Quit, or continue with caution.[K
+(2) An edit session for this file crashed.[K
+    If this is the case, use ":recover" or "vim -r discover.py"[K
+    to recover the changes (see ":help recovery").[K
+    If you did this already, delete the swap file "/home/tmn/.local/state/nvim/s
+wap//%home%tmn%src%bleak%bleak%examples%discover.py.swp"[K
+    to avoid this message.[K
+[K
+(B[0;1m[38;2;46;139;87m[48;2;248;242;229mSwap file "~/.local/state/nvim/swap//%home%tmn%src%bleak%bleak%examples%discover
+-- More --(B[m[38;2;70;67;64m[48;2;248;242;229m[K[?25h
