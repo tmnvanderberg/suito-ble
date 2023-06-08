@@ -1,9 +1,7 @@
 import asyncio
 import json
 
-from bleak import BleakClient
-
-address = "FD:99:E8:D9:5A:C2"
+from bleak import BleakClient, BleakScanner
 
 def find_gatt_uuid(gatt, description):
     for primary in gatt:
@@ -17,17 +15,25 @@ def find_gatt_uuid(gatt, description):
 with open('output.json') as file:
     gatt = json.load(file)
 
-fitnessMachineStatusUUID = find_gatt_uuid(gatt, "Fitness Machine Status")
+async def enable_notifications(client, characteristic_uuid):
+    await client.start_notify(characteristic_uuid, notification_callback)
 
-try :
-    async def main(address):
-        async with BleakClient(address) as client:
-            characteristic_read = await client.read_gatt_char(fitnessMachineStatusUUID)
-            print("Characteristic:", characteristic_read)
-    asyncio.run(main(address))
-except Exception as inst:
-    print("Failed.")
-    print(type(inst))
-    print(inst)
+async def notification_callback(sender: int, data: bytearray):
+    print("notification received", sender, data);
 
+async def connect(deviceName):
+    scanner = BleakScanner()
+    devices = await scanner.discover()
+    device = next((d for d in devices if d.name == deviceName), None)
+    if device:
+        client = BleakClient(device)
+        await client.connect()
+        print('connected')
+        await enable_notifications(client, find_gatt_uuid(gatt, "Indoor Bike Data"))
+        print("entering sleep loop")
+        while True:
+            await asyncio.sleep(1) 
+
+device = "SUITO"
+asyncio.run(connect(device))
 
