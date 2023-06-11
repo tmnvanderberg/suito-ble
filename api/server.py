@@ -43,6 +43,9 @@ bikeDataList = [
     "Remaining Time",
 ]
 
+bikeDataNames = {
+    "cadence": "Instantaneous Cadence" }
+
 app = FastAPI()
 
 async def dummySubCallback(sender: int, data: bytearray):
@@ -110,6 +113,8 @@ class BikeDataService:
             subscriber.bikeServiceUpdate(name, value)
 
     def set_value(self, name, value):
+        # if (name == "Instantaneous Power"):
+        #     print(f"value {name}:{value}")
         self.bikeData[name] = value
         self.notify_subscribers(name, value)
 
@@ -117,9 +122,10 @@ class BikeDataService:
         return self.bikeData[name]
 
     async def callback(self, sender: int, data: bytearray):
-        print("--- callback ---")
         for feature, byte in zip(bikeDataList, list(data)):
-            self.set_value(feature, byte)
+            if (feature == "Instantaneous Power"):
+                print(f"featuer {feature}:{byte}")
+            self.set_value(feature, str(byte))
 
 
 class Trainer:
@@ -132,7 +138,6 @@ class Trainer:
         await client.start_notify(characteristic_uuid, callback)
 
     async def connect(self, deviceName):
-        print("connecting..")
         scanner = BleakScanner()
         devices = await scanner.discover()
         device = next((d for d in devices if d.name == deviceName), None)
@@ -140,28 +145,17 @@ class Trainer:
             print("found device")
             client = BleakClient(device)
 
-            print("connecting..")
             await client.connect()
             print("connected")
 
-            # @todo 
-            # for characteristic, callback in reads.items():
-            #     characteristic_value = await client.read_gatt_char(
-            #         find_gatt_uuid(self.gatt, characteristic)
-            #     )
+            await self.enable_notifications(
+                client,
+                find_gatt_uuid(self.gatt, "Indoor Bike Data"),
+                self.bikeDataService.callback,
+            )
 
-            for characteristic, callback in subscriptions.items():
-                await self.enable_notifications(
-                    client,
-                    find_gatt_uuid(self.gatt, characteristic),
-                    self.bikeDataService.callback,
-                )
-
-            print("entering loop")
-            while True:
-                await asyncio.sleep(1)
         else:
-            print("device not found")
+            raise TimeoutError("device not found!")
 
     async def start(self):
         print("starting..")
@@ -169,7 +163,6 @@ class Trainer:
 
     @classmethod
     async def create(cls, bikeDataService):
-        print("creating..")
         trainer = Trainer(bikeDataService)
         await trainer.start()
         return trainer
@@ -177,7 +170,8 @@ class Trainer:
 bikeDataService = BikeDataService()
 
 async def start_services():
-    await Trainer.create(bikeDataService)
+    trainer = await Trainer.create(bikeDataService)
+    return [trainer]
 
 @app.get("/")
 async def root():
@@ -185,8 +179,24 @@ async def root():
 
 @app.get("/power")
 async def power():
-    return {"Instantaneous Power" : bikeDataService.get_value("Instantaneous Power")}
+    power = bikeDataService.get_value("Instantaneous Power")
+    print(f"Power request, returning {power}");
+    return {"power" : power }
+
+@app.get("/cadence")
+async def cadence():
+    cadence = bikeDataService.get_value(bikeDataNames['cadence'])
+    print(f"Cadence request, returning {cadence}");
+    return {"cadence" : cadence }
+
+async def main():
+    services = await start_services()
+    print("services started..", services)
+    config = uvicorn.Config("server:app", port=8000, log_level="info")
+    server = uvicorn.Server(config)
+    await server.serve()
+    while(True):
+        await asyncio.sleep(1)
 
 if __name__ == "__main__":
-    asyncio.run(start_services())
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    asyncio.run(main())
