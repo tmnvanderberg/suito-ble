@@ -44,7 +44,9 @@ bikeDataList = [
 ]
 
 bikeDataNames = {
-    "cadence": "Instantaneous Cadence" }
+    "cadence": "Instantaneous Cadence",
+    "avg_power": "Average Power",
+    }
 
 app = FastAPI()
 
@@ -97,10 +99,12 @@ def find_gatt_uuid(gatt, description):
 
 class BikeDataService:
     def __init__(self):
+        print('init BikeDataService')
         self.bikeData = {
             string: value for value, string in enumerate(bikeDataList, start=1)
         }
         self.subscribers = []
+        self.count = 0
 
     def subscribe(self, subscriber):
         self.subscribers.append(subscriber)
@@ -119,20 +123,29 @@ class BikeDataService:
         self.notify_subscribers(name, value)
 
     def get_value(self, name):
+        print(self.bikeData)
+        print(f"count: {self.count}")
+        print(f"get: {name} {self.bikeData[name]}")
         return self.bikeData[name]
 
     async def callback(self, sender: int, data: bytearray):
+        print("-------")
+        print(f"callback count: {self.count}")
         for feature, byte in zip(bikeDataList, list(data)):
             if (feature == "Instantaneous Power"):
-                print(f"featuer {feature}:{byte}")
+                print(f"{feature}:{byte}")
+                self.count += 1
             self.set_value(feature, str(byte))
 
-
 class Trainer:
-    def __init__(self, bikeDataService):
-        self.bikeDataService = bikeDataService
+    def __init__(self):
+        print('init Trainer')
+        self.bikeDataService = BikeDataService()
         with open("characteristics.json") as file:
             self.gatt = json.load(file)
+    
+    def getBikeDataService(self):
+        return self.bikeDataService
 
     async def enable_notifications(self, client, characteristic_uuid, callback):
         await client.start_notify(characteristic_uuid, callback)
@@ -162,35 +175,51 @@ class Trainer:
         await self.connect("SUITO")
 
     @classmethod
-    async def create(cls, bikeDataService):
-        trainer = Trainer(bikeDataService)
+    async def create(cls):
+        trainer = Trainer()
         await trainer.start()
         return trainer
 
-bikeDataService = BikeDataService()
+# bikeDataService = BikeDataService()
 
-async def start_services():
-    trainer = await Trainer.create(bikeDataService)
-    return [trainer]
+trainer = Trainer()
+
+class Services:
+    def __init__(self, trainer):
+        print('init Services')
+        self.trainer = trainer
+        
+    async def start(self):
+        self.trainer = await Trainer.create()
 
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/power")
-async def power():
+@app.get("/avg_power")
+async def avg_power():
+    bikeDataService = trainer.getBikeDataService()
+    power = bikeDataService.get_value(bikeDataNames['avg_power'])
+    print(f"avg power request, returning {power}");
+    return {"avg_power" : power }
+
+@app.get("/inst_power")
+async def instant_power():
+    bikeDataService = trainer.getBikeDataService()
     power = bikeDataService.get_value("Instantaneous Power")
     print(f"Power request, returning {power}");
-    return {"power" : power }
+    return {"instant_power" : power }
 
 @app.get("/cadence")
 async def cadence():
+    bikeDataService = trainer.getBikeDataService()
     cadence = bikeDataService.get_value(bikeDataNames['cadence'])
     print(f"Cadence request, returning {cadence}");
     return {"cadence" : cadence }
 
 async def main():
-    services = await start_services()
+    services = Services(trainer)
+    await services.start()
     print("services started..", services)
     config = uvicorn.Config("server:app", port=8000, log_level="info")
     server = uvicorn.Server(config)
