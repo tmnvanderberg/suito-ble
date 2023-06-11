@@ -182,7 +182,7 @@ class Trainer:
 
 # bikeDataService = BikeDataService()
 
-trainer = Trainer()
+# trainer = Trainer()
 
 class Services:
     def __init__(self, trainer):
@@ -196,28 +196,29 @@ class Services:
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/avg_power")
-async def avg_power():
-    bikeDataService = trainer.getBikeDataService()
-    power = bikeDataService.get_value(bikeDataNames['avg_power'])
-    print(f"avg power request, returning {power}");
-    return {"avg_power" : power }
+# @app.get("/avg_power")
+# async def avg_power():
+#     bikeDataService = trainer.getBikeDataService()
+#     power = bikeDataService.get_value(bikeDataNames['avg_power'])
+#     print(f"avg power request, returning {power}");
+#     return {"avg_power" : power }
 
-@app.get("/inst_power")
-async def instant_power():
-    bikeDataService = trainer.getBikeDataService()
-    power = bikeDataService.get_value("Instantaneous Power")
-    print(f"Power request, returning {power}");
-    return {"instant_power" : power }
+# @app.get("/inst_power")
+# async def instant_power():
+#     bikeDataService = trainer.getBikeDataService()
+#     power = bikeDataService.get_value("Instantaneous Power")
+#     print(f"Power request, returning {power}");
+#     return {"instant_power" : power }
 
-@app.get("/cadence")
-async def cadence():
-    bikeDataService = trainer.getBikeDataService()
-    cadence = bikeDataService.get_value(bikeDataNames['cadence'])
-    print(f"Cadence request, returning {cadence}");
-    return {"cadence" : cadence }
+# @app.get("/cadence")
+# async def cadence():
+#     bikeDataService = trainer.getBikeDataService()
+#     cadence = bikeDataService.get_value(bikeDataNames['cadence'])
+#     print(f"Cadence request, returning {cadence}");
+#     return {"cadence" : cadence }
 
 async def main():
+    trainer = Trainer()
     services = Services(trainer)
     await services.start()
     print("services started..", services)
